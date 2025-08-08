@@ -1,0 +1,1044 @@
+<head>
+  <style>
+    #tablaRegistros th, #tablaRegistros td {
+      padding: 0.7em 0.5em;
+      border: 1px solid #0057b8;
+      text-align: left;
+      word-break: break-word;
+      white-space: pre-line;
+      vertical-align: top;
+    }
+    #tablaRegistros th {
+      background: #003e7e !important;
+      color: #fff !important;
+    }
+    #datosGuardados {
+      color: #fff !important;
+    }
+    #tablaRegistros, #tablaRegistros table, #tablaRegistros th, #tablaRegistros td {
+      background: #003e7e !important;
+      color: #fff !important;
+    }
+    #tablaRegistros {
+      background: #003e7e !important;
+      color: #fff !important;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-bottom: 2em;
+    }
+    #tablaRegistros * {
+      background: transparent !important;
+      color: #fff !important;
+    }
+    @media (max-width: 900px) {
+      #formDatos > div[style*='display: flex'] {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Movistar - Versión Secciones Claras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0a2342 !important;
+      color: #fff !important;
+    }
+    h1, h2, h3, h4 {
+      color: #fff !important;
+    }
+    form#formDatos {
+      background: #0a2342;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0003;
+      padding: 2em 1.5em 1.5em 1.5em;
+      margin-bottom: 2em;
+    }
+    form#formDatos input, form#formDatos select, form#formDatos textarea {
+      background: #0a2342 !important;
+      color: #fff !important;
+      border: 1px solid #0057b8;
+      border-radius: 5px;
+      padding: 0.5em 0.7em;
+      margin-top: 0.1em;
+      margin-bottom: 0.5em;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    form#formDatos input:focus, form#formDatos select:focus, form#formDatos textarea:focus {
+      outline: 2px solid #0072e5;
+      background: #0057b8 !important;
+    }
+    body { font-family: Arial, sans-serif; margin: 2em; background: #0a2342; color: #fff; }
+    h1, h2, h3, h4 { color: #fff !important; }
+    ul, ol { margin-bottom: 1em; }
+    .section { background: #003e7e !important; color: #fff !important; border-radius: 8px; box-shadow: 0 2px 8px #0003; padding: 1.5em; margin-bottom: 2em; }
+    .important { color: #b80000; font-weight: bold; }
+    code { background: #003e7e !important; color: #fff !important; padding: 2px 6px; border-radius: 4px; }
+    nav { margin-bottom: 2em; background: #003e7e !important; border-radius: 0 0 8px 8px; padding: 0.5em; }
+    nav a { margin-right: 1em; color: #fff !important; text-decoration: none; font-weight: bold; background: #0057b8 !important; border-radius: 4px; padding: 0.3em 0.8em; }
+    nav a:hover { text-decoration: underline; background: #0072e5 !important; color: #fff !important; }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      background:#003e7e !important;
+      color:#fff !important;
+    }
+    th, td {
+      padding:8px;
+      border:1px solid #0057b8;
+      background: #003e7e !important;
+      color: #fff !important;
+    }
+    th {
+      background:#003e7e !important;
+      color:#fff !important;
+    }
+    #datosGuardados, #tablaRegistros {
+      background: #003e7e;
+      color: #fff;
+      border-radius: 8px;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      word-break: break-word;
+    }
+    button, input[type="button"], input[type="submit"] {
+      color: #fff !important;
+      background: #0057b8 !important;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 18px;
+      font-size: 1em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+    }
+    button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+      background: #0072e5 !important;
+      color: #fff !important;
+    }
+    nav span {
+      color: #fff;
+      font-size: 0.95em;
+      margin-left: 0.5em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2em;
+    }
+    .section {
+      background: #003e7e !important;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #0001;
+      margin-bottom: 1.2em;
+      padding: 0.5em;
+      width: 100%;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.7em;
+      font-size: 1em;
+    }
+    form#formDatos label, form#formDatos div[style*='font-weight:500'] {
+      color: #fff !important;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="date"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 0.4em;
+      margin-top: 0.2em;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form button {
+      margin-top: 0.7em;
+      font-size: 1em;
+      padding: 0.5em 1.2em;
+      border-radius: 4px;
+      border: none;
+      background: #0057b8;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    form button:hover {
+      background: #0072e5 !important;
+    }
+    #tablaRegistros table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.97em;
+      table-layout: auto;
+    }
+    #tablaRegistros th, #tablaRegistros td {
+      padding: 0.7em 0.5em;
+      border: 1px solid #0057b8;
+      text-align: left;
+      word-break: break-word;
+      white-space: pre-line;
+      vertical-align: top;
+    }
+    #tablaRegistros th {
+      background: #003e7e !important;
+      color: #fff !important;
+    }
+    #datosGuardados {
+      color: #fff !important;
+    }
+    #tablaRegistros, #tablaRegistros table, #tablaRegistros th, #tablaRegistros td {
+      background: #003e7e !important;
+      color: #fff !important;
+    }
+    #tablaRegistros {
+      background: #003e7e !important;
+      color: #fff !important;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-bottom: 2em;
+    }
+    #tablaRegistros * {
+      background: transparent !important;
+      color: #fff !important;
+    }
+    @media (max-width: 900px) {
+      #formDatos > div[style*='display: flex'] {
+        flex-direction: column !important;
+      }
+      #formDatos > div[style*='display: flex'] > div {
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+    }
+    @media (max-width: 700px) {
+      nav {
+        font-size: 0.97em;
+        gap: 0.2em;
+        padding: 0.4em 0.2em;
+      }
+      .section {
+        padding: 0.7em 0.2em 1em 0.2em;
+      }
+      #tablaRegistros table, #tablaRegistros thead, #tablaRegistros tbody, #tablaRegistros th, #tablaRegistros td, #tablaRegistros tr {
+        display: block;
+      }
+      #tablaRegistros tr {
+        margin-bottom: 1em;
+        border-bottom: 2px solid #eee;
+      }
+      #tablaRegistros td, #tablaRegistros th {
+        padding: 0.4em 0.2em;
+        border: none;
+        position: relative;
+      }
+      #tablaRegistros td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.2em;
+        color: #0057b8;
+      }
+      #tablaRegistros table {
+        min-width: 0;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.3em;
+      }
+      h2 {
+        font-size: 1.1em;
+      }
+      nav {
+        font-size: 0.93em;
+      }
+      .section {
+        padding: 0.5em 0.1em 0.7em 0.1em;
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.97em;
+    }
+    th, td {
+      padding: 0.5em 0.3em;
+      border: 1px solid #ccc;
+      text-align: left;
+      word-break: break-word;
+    }
+    th {
+      background: #e6f0fa;
+    }
+    @media (max-width: 700px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      tr {
+        margin-bottom: 1em;
+        border-bottom: 2px solid #eee;
+      }
+      td, th {
+        padding: 0.4em 0.2em;
+        border: none;
+        position: relative;
+      }
+      td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.2em;
+        color: #0057b8;
+      }
+      table {
+        min-width: 0;
+      }
+    }
+    button.copiar-whatsapp {
+      background: #1db954 !important;
+      color: #fff !important;
+    }
+    button.copiar-whatsapp:hover {
+      background: #168f3e !important;
+    }
+    button#borrarRegistros {
+      background: #b80000 !important;
+      color: #fff !important;
+    }
+    button#borrarRegistros:hover {
+      background: #7a0000 !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guía de Capacitación para Vendedores Movistar</h1>
+  <nav>
+    <a href="#info">Información Clave</a>
+    <a href="#planes">Planes y Beneficios</a>
+    <a href="#pasos">Pasos de Venta</a>
+    <a href="#consejos">Consejos y Objeciones</a>
+    <a href="#paginas">Páginas Útiles</a>
+    <span style="font-size:0.95em; color:#0057b8; margin-left:0.5em;">
+  [
+  <a href="#" onclick="window.open('https://apps-alc.mitrol.cloud/auth/realms/mitrol/protocol/openid-connect/auth?client_id=webpad-3-vercel&redirect_uri=https%3A%2F%2Fapps-alc.mitrol.cloud%2Fwebpad%2F&state=ee3d02be-259a-457c-9bcf-576ae27477d7&response_mode=fragment&response_type=code&scope=openid&nonce=6894ee20-2e5e-43ec-8c05-57bdc76fc18b','mitrol');return false;" title="Mitrol WebPad">Mitrol</a> |
+  <a href="#" onclick="window.open('https://sites.google.com/view/planes-mvs/link-de-planes','links_planes');return false;" title="Links de Planes Movistar">Links de planes</a> |
+  <a href="#" onclick="window.open('https://pagar.rapipago.com.ar/rapipagoWeb/pagos/','rapipago');return false;" title="Pago Rapipago">RapiPago</a> |
+  <a href="#" onclick="window.open('https://informes.nosis.com/?source=SitioNosis&q=38207907&UrlReferer=','nosis');return false;" title="Consulta Nosis">NOSIS</a> |
+  <a href="#" onclick="window.open('https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do','cuit_afip');return false;" title="Constancia de CUIT (AFIP)">AFIP</a> |
+  <a href="#" onclick="window.open('https://www.movistar.com.ar/4g','cobertura4g');return false;" title="Cobertura 4G Movistar">4g navega a mayor velocidad</a> |
+  <a href="#" onclick="window.open('https://www.movistar.com.ar/ayuda/locales-movistar','locales_movistar');return false;" title="Locales Movistar">Locales Movistar</a> |
+  <a href="#" onclick="window.open('https://www.andreani.com/buscar-sucursal','andreani');return false;" title="Buscar sucursal Andreani">Andreani</a> |
+  <a href="#" onclick="window.open('https://www.movistar.com.ar/ayuda/pedir-nuevo-chip','nuevo_chip');return false;" title="Pedir nuevo chip">Pedir un nuevo chip</a> |
+  <a href="#" onclick="window.open('https://www.google.com/maps','maps');return false;" title="Google Maps">Google Maps</a> |
+  <a href="#" onclick="window.open('https://numeracion.enacom.gob.ar/','enacom');return false;" title="Numeración ENACOM">ENACOM</a> |
+  <a href="#" onclick="window.open('https://customercorner.net/users/sign_in','customer');return false;" title="Customer">Customer</a>
+  ]
+    </span>
+    <a href="#formulario">Carga de Datos</a>
+  </nav>
+  <div class="section" id="formulario">
+
+    <h2>Formulario de Carga de Datos</h2>
+    <form id="formDatos">
+      <div style="display: flex; flex-wrap: nowrap; gap: 0; align-items: flex-start; padding: 0; margin: 0; width:100%;">
+        <div style="width:33.3333%; min-width:0; margin:0; padding:0;">
+          <h3>Ficha de Venta</h3>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Nombre y Apellido:</div><input type="text" name="nombre" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">DNI:</div><input type="text" name="dni" required pattern="[0-9]+" inputmode="numeric" title="Solo números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Correo electrónico:</div><input type="email" name="correo"></div>
+<div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Linea:</div><input type="text" name="linea" pattern="[0-9]*" inputmode="numeric" title="Solo números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Fecha de nacimiento:</div><input type="date" name="fecha_nac"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Plan:</div><input type="text" name="plan" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Gigas de regalo:</div><input type="text" name="gigas_regalo" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Valor del plan:</div><input type="text" name="valor_plan" pattern="[A-Za-z0-9 ]*" title="Solo letras y números" style="max-width:400px;"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Dirección:</div><input type="text" name="direccion" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Referencias:</div><input type="text" name="referencias" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Entre calles:</div><input type="text" name="entre_calles" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Localidad:</div><input type="text" name="localidad" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Provincia:</div><input type="text" name="provincia" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Coordenadas google maps:</div><input type="text" name="maps" pattern="[A-Za-z0-9:/._-]*" title="Solo letras, números y :/._-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Código Postal:</div><input type="text" name="cp" pattern="[A-Za-z0-9]*" title="Letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Teléfono Alternativo:</div><input type="text" name="tel_alt" pattern="[A-Za-z0-9 +()-]*" title="Solo letras, números y +()-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Línea/s a portar:</div><input type="text" name="lineas_portar" pattern="[A-Za-z0-9 ,.-]*" title="Solo letras, números y ,.-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Línea madre (la que recibe el pin):</div><input type="text" name="linea_madre" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Compañía (claro/personal):</div><input type="text" name="compania" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Abono/Prepago:</div><input type="text" name="abono" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Pin:</div><input type="text" name="pin" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <button type="button" class="copiar-whatsapp" onclick="copiarSeccionFormulario('ficha')" style="margin:0.7em 0 1.2em 0; padding:6px 18px; font-size:1em;">Copiar sección para WhatsApp</button>
+          <button type="button" class="borrar-formulario" onclick="borrarSeccionFormulario('ficha')" style="margin:0.7em 0 1.2em 0 1em; padding:6px 18px; font-size:1em; background:#b80000;">Borrar datos</button>
+
+        </div>
+        <div style="width:33.3333%; min-width:0; margin:0; padding:0;">
+          <h3>Ficha de Porta</h3>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">DNI/CUIT:</div><input type="text" name="dni_cuit_porta" pattern="[0-9]*" inputmode="numeric" title="Solo números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">NOMBRE DEL CL:</div><input type="text" name="nombre_cl_porta" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">LINEA:</div><input type="text" name="linea_porta" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">MOTIVO DE CONSULTA:</div><input type="text" name="motivo_porta" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <button type="button" class="copiar-whatsapp" onclick="copiarSeccionFormulario('porta')" style="margin:0.7em 0 1.2em 0; padding:6px 18px; font-size:1em;">Copiar sección para WhatsApp</button>
+          <button type="button" class="borrar-formulario" onclick="borrarSeccionFormulario('porta')" style="margin:0.7em 0 1.2em 0 1em; padding:6px 18px; font-size:1em; background:#b80000;">Borrar datos</button>
+        </div>
+        <div style="width:33.3333%; min-width:0; margin:0; padding:0;">
+          <h3>Ficha de Fibra</h3>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">DNI:</div><input type="text" name="dni_fibra" pattern="[0-9]*" inputmode="numeric" title="Solo números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Coordenadas:</div><input type="text" name="coordenadas_fibra" pattern="[A-Za-z0-9 ,.-]*" title="Solo letras, números y ,.-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Domicilio:</div><input type="text" name="domicilio_fibra" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Casa o edificio:</div><input type="text" name="casa_edif_fibra" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Descripción del problema:</div><input type="text" name="problema_fibra" pattern="[A-Za-z0-9 .,;-]*" title="Solo letras, números y .,;-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Tarjeta:</div><input type="text" name="tarjeta_fibra" pattern="[A-Za-z0-9 ]*" title="Solo letras y números"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Número alternativo:</div><input type="text" name="num_alt_fibra" pattern="[A-Za-z0-9 +()-]*" title="Solo letras, números y +()-"></div>
+          <div style="margin-bottom: 0.8em;"><div style="font-weight:500; color:#0057b8; margin-bottom:0.2em;">Calle que completa la manzana:</div><input type="text" name="calle_manzana_fibra" pattern="[A-Za-z0-9 .,-º°]*" title="Solo letras, números y .,-º°"></div>
+          <button type="button" class="copiar-whatsapp" onclick="copiarSeccionFormulario('fibra')" style="margin:0.7em 0 1.2em 0; padding:6px 18px; font-size:1em;">Copiar sección para WhatsApp</button>
+          <button type="button" class="borrar-formulario" onclick="borrarSeccionFormulario('fibra')" style="margin:0.7em 0 1.2em 0 1em; padding:6px 18px; font-size:1em; background:#b80000;">Borrar datos</button>
+        </div>
+      </div>
+
+      <br>
+      <button type="submit">Guardar datos</button>
+      <button type="button" id="verRegistros" style="margin-left:1em;">Ver todos los registros</button>
+      <button type="button" id="exportarRegistros" style="margin-left:1em;">Exportar a TXT</button>
+      <button type="button" id="borrarRegistros" style="margin-left:1em;">Borrar registros</button>
+    </form>
+    <div id="datosGuardados" style="margin-top:1em;"></div>
+    <div id="tablaRegistros" style="margin-top:1em;"></div>
+  </div>
+
+  <div class="section" id="cierre_comercial">
+    <h2>Cierre comercial</h2>
+    <ul>
+      <li>Confirma con el cliente todos los datos y condiciones del servicio.</li>
+      <li>Reitera los beneficios principales y resuelve cualquier duda final.</li>
+      <li>Explica los próximos pasos: validación, instalación o portabilidad, y tiempos estimados.</li>
+      <li>Recuerda los canales de contacto y soporte postventa.</li>
+      <li>Agradece la confianza y despídete cordialmente.</li>
+    </ul>
+    <hr>
+    <div id="cierreComercialContenido">
+      <ul style="list-style-type: disc;">
+        <li><b>Totalización:</b> Para recibir futuras promociones, ¿usted tiene internet de movistar? (Si tiene, pedir la línea fija así recibe descuento en su factura comentárselo)</li>
+        <li><b>Datos personales:</b> Estamos portando la línea <span class="rellenar" data-campo="linea" style="display:inline-block; min-width:120px; border-bottom:1.5px solid #fff; vertical-align:middle;"></span> a Nombre y Apellido del titular actual <span class="rellenar" data-campo="nombre"></span>. Me confirma los últimos 3 dígitos de su DNI <span class="rellenar" data-campo="dni"></span>. Su compañía entonces es <span class="rellenar" data-campo="compania"></span>?
+          <ul>
+            <li><b>Abono fijo:</b> me comentó que cuenta con factura mensual, ¿la factura está a su nombre o a nombre de otra persona?</li>
+            <li><b>Prepago:</b> me comentó que cuenta con línea prepaga, ¿usted posee su línea activa hace más de 60 días? ¿Cuándo realizó la última recarga?</li>
+          </ul>
+        </li>
+        <li><b>CHEQUEO DE E-SIM:</b> ¿POSEE E -SIM? ¿SU CHIP ES FISICO O VIRTUAL?</li>
+        <li><b>Domicilio:</b> “Va a recibir su chip en el domicilio: Calle <span class="rellenar" data-campo="direccion"></span>, altura <span class="rellenar" data-campo="direccion"></span>, piso/dpto. <span class="rellenar" data-campo="referencias"></span>, Entre calles <span class="rellenar" data-campo="entre_calles"></span>, localidad/cp <span class="rellenar" data-campo="localidad"></span>/<span class="rellenar" data-campo="cp"></span>, provincia <span class="rellenar" data-campo="provincia"></span> , con referencias (2 mínimos, referencias específicas que se distingan del resto de la casa)
+          <ul>
+            <li>¿Recibe facturas en su domicilio? ¿O compras que realice por internet?</li>
+            <li>¿La altura que me comentó de su casa, está visible para los deliverys?</li>
+          </ul>
+        </li>
+  <li><b>Conceptos a abonar Movil:</b>  Le recuerdo que el costo del servicio AL DIA DE HOY es de $<span class="rellenar" data-campo="valor_plan" style="display:inline-block; min-width:60px; border-bottom:1.5px solid #fff; vertical-align:middle;"></span> por que incluye un descuento fijo de $xxxx POR (duración del descuento 12 o 24 MESES) Recuerde que el servicio se factura a mes adelantado” (REPASAR GB DEL PLAN CONTRATADO) Su plan base es de <span class="rellenar" data-campo="plan" style="display:inline-block; min-width:120px; border-bottom:1.5px solid #fff; vertical-align:middle;"></span> gb + <span class="rellenar" data-campo="gigas_regalo" style="display:inline-block; min-width:120px; border-bottom:1.5px solid #fff; vertical-align:middle;"></span> de regalo con una duración de xxx meses estos ultimos se habilitaran 48 hs después de activada la línea.</li>
+        <li><b>Chequeo de datos:</b> Su email es <span class="rellenar" data-campo="correo"></span> y su teléfono alternativo <span class="rellenar" data-campo="tel_alt"></span>. Estará recibiendo su facturación Online a través del mail que nos proporcionó.</li>
+        <li><b>Desde la APP mi movistar:</b> ingresando a la sección “servicios”
+          <ul>
+            <li>Desde la App de Movistar, puede ver toda la información referida a su factura, ya sea su ciclo de facturación, vencimiento, montos a pagar</li>
+            <li>Puede adherirse al débito automático</li>
+            <li>También sumar 4GB de regalo en cada línea móvil (Si es que porta +de 2 líneas) registradas bajo el mismo titular</li>
+            <li>Activar el TEST DRIVE de 10 GB por 3 meses consecutivos</li>
+          </ul>
+        </li>
+        <li><b>Fecha de Portabilidad:</b>  
+          <ul>
+            <li>Una vez aprobada la portabilidad su línea portara entre 7 a 10 días Hábiles.</li>
+            <li>Un día antes por msj de wps vamos a estar informando la fecha de portabilidad para que se quede tranquilo/a. ES IMPORTANTE QUE USTED NO COLOQUE EL CHIP ANTES DE LA FECHA INFORMADA. DE TODAS MANERAS, SE VA A DAR CUENTA, PORQUE SU LINEA DE CLARO, DEJARA DE RECIBIR SEÑAL, AHÍ ES CUANDO DEBE COLOCARLO.</li>
+            <li>LE COMENTO, QUE POR UNICA VEZ DEBERA VALIDAR IDENTIDAD AL ACTIVARLO</li>
+            <li>En caso que tengas alguna dificultad con la validación, inténtelo nuevamente o comuníquese al 0800-321-76782 opción 4</li>
+            <li>Le solicitamos que en caso de no levantar señal en el chip reinicie el equipo.</li>
+          </ul>
+        </li>
+        <li><b>Encuesta NPS:</b> Por otro lado, dentro de los próximos días recibirá una encuesta de satisfacción por medio de un SMS. Le solicitamos por favor que la complete, ya que su opinión es muy importante para la empresa.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section" id="crm_customer">
+    <h2>Guía de Uso para CRM CUSTOMER</h2>
+    <ol>
+      <li><b>Ingreso y navegación inicial</b>
+        <ul>
+          <li>Ingresa a CUSTOMER con tu usuario.</li>
+          <li>En el menú lateral izquierdo, haz clic en <b>Solicitudes</b> y luego en <b>Todas</b>.</li>
+          <li>Para crear una nueva solicitud, haz clic en el ícono de “+” (más) en la esquina.</li>
+        </ul>
+      </li>
+      <li><b>Completar una nueva solicitud</b>
+        <ul>
+          <li><b>Pestaña: General</b></li>
+          <li><b>Tipo de cliente:</b> Selecciona “Individuo” si el cliente contrata con DNI, o “Negocios” si contrata con CUIT.</li>
+          <li><b>Tipo de producto:</b> Elige “Fibra” o “Portabilidad” según corresponda.</li>
+          <li><b>Producto anterior:</b> Si el cliente tenía prepago, selecciona “Prepago”. Si tenía abono, selecciona “Pospago”.</li>
+          <li><b>Producto:</b> Selecciona el plan vendido (ejemplo: 8 GB). Si hay más de un producto, usa “Agregar otro producto”.</li>
+          <li><b>Datos de venta:</b> Fecha de venta: Selecciona la fecha actual o la correspondiente. Vendedor: Selecciona tu nombre (aparecerá solo tu usuario). Fuente de solicitud: Indica de dónde obtuviste el cliente (ejemplo: Base de datos). Punto de venta: Selecciona el punto de venta si corresponde.</li>
+          <li><b>Datos del cliente:</b> Nombre y Apellido: Completa exactamente como figura en el DNI o CUIT: Si es individuo, coloca el DNI. Si es negocio, coloca el CUIT. Fecha de nacimiento: Completa con el formato correcto. Email: Ingresa el correo del cliente. Método de pago: Para portabilidad, deja “Efectivo”. Para fibra, selecciona el método correspondiente. Dirección: Completa calle, número, piso, departamento, entre calles, barrio, manzana, casa/lote, referencias, provincia, localidad y código postal. Si el envío es a domicilio, pon la dirección del cliente. Si es a una tienda Movistar o Andreani, pon la dirección de la sucursal. En referencias, especifica “Sucursal Andreani”, “Tienda Movistar” o detalles de la casa. Teléfonos: Ingresa los teléfonos principales y adicionales. Observaciones: Agrega cualquier dato relevante. Marca la casilla si los datos de facturación son los mismos.</li>
+          <li><b>Datos de fibra (si aplica):</b> Completa coordenadas, cantidad de decodificadores, baseport, paquetes, otras referencias, bono totalización y línea a totalizar si corresponde.</li>
+        </ul>
+      </li>
+      <li><b>Pestaña: Activación</b>
+        <ul>
+          <li><b>Link Google Maps:</b> Copia el link de la ubicación desde la página de Andreani o la tienda Movistar, según corresponda.</li>
+          <li><b>Número de Orden:</b> Completa si tienes el dato.</li>
+          <li><b>Estado de Solicitud:</b> Deja en “FIBRA PREVENTA” hasta que te indiquen lo contrario.</li>
+          <li><b>Fecha de cita y aprobación:</b> Completa si corresponde.</li>
+          <li><b>Sub-estado y comentarios:</b> En comentarios, pon “Línea a portar” y el número de línea, plan, y cualquier otra observación relevante.</li>
+          <li><b>Adjuntos:</b> Adjunta la captura del PIN, evidencia de T3 y las dos fotos del DNI. Si el cliente tiene deuda, adjunta el monto y el ID.</li>
+        </ul>
+      </li>
+      <li><b>Recomendaciones y tips</b>
+        <ul>
+          <li><b>Datos exactos:</b> Siempre ingresa los datos tal cual figuran en el DNI o CUIT.</li>
+          <li><b>Dirección completa:</b> Cuanto más completa, menos problemas de devoluciones.</li>
+          <li><b>Referencias:</b> Para Andreani: “Sucursal Andreani”. Para tienda Movistar: “Casim”. Para domicilio: dos referencias obligatorias.</li>
+          <li><b>Línea a portar:</b> Sin puntos ni espacios, ni al principio ni al final.</li>
+          <li><b>Estado de solicitud:</b> Deja en “Preventa” hasta que te indiquen cambiarlo.</li>
+          <li><b>Adjuntos:</b> Siempre adjunta las dos caras del DNI, el PIN y la evidencia de T3.</li>
+          <li><b>Errores comunes:</b> Si el sistema indica “factura inexistente”, revisa si el DNI está bien escrito, si es titular, o si es prepago.</li>
+        </ul>
+      </li>
+      <li><b>Finalización</b>
+        <ul>
+          <li>Una vez completados todos los campos y adjuntos, haz clic en <b>Crear</b>.</li>
+          <li>Si necesitas editar, solo podrás agregar las fotos del DNI antes de finalizar.</li>
+        </ul>
+      </li>
+    </ol>
+    <hr>
+    <h3>Formato de comentarios obligatorio en activación</h3>
+    <pre style="background:#003e7e; color:#fff; border:1px solid #ccc; padding:1em; border-radius:6px; white-space:pre-wrap; word-break:break-word; max-width:100%; overflow-x:auto; font-size:1em;">
+LEYENDA UNILINEA:
+LINEA A PORTAR: [número] / PLAN: [GB] / PROMO 85% [SI ESTA VIGENTE] / CASIM (EL ENVÍO QUE CORRESPONDA) / SI TIENE DEUDA PONER EL MONTO
+    </pre>
+    <pre style="background:#003e7e; color:#fff; border:1px solid #ccc; padding:1em; border-radius:6px; white-space:pre-wrap; word-break:break-word; max-width:100%; overflow-x:auto; font-size:1em;">
+LEYENDA MULTILINEA/MULTIPLE
+MULTIPLEX.../ LINEA MADRE: [número] SEGUNDA LINEA: [número] / TERCERA LINEA: [número] ...(LAS QUE CORRESPONAN) PLAN: [GB] / PROMO 85% / CASIM (EL ENVÍO QUE CORRESPONDA) / SI TIENE 
+    </pre>
+    <pre style="background:#003e7e; color:#fff; border:1px solid #ccc; padding:1em; border-radius:6px; white-space:pre-wrap; word-break:break-word; max-width:100%; overflow-x:auto; font-size:1em;">
+LEYENDA FIBRA 
+ALTA ALTA DNI [número DNI] / LINEA A PORTAR [número] / ALTERNATIVO [número] / AUDITORIA E ISNTALACIÓN DE (MAÑANA O TARDE) 
+    </pre>
+    <pre style="background:#003e7e; color:#fff; border:1px solid #ccc; padding:1em; border-radius:6px; white-space:pre-wrap; word-break:break-word; max-width:100%; overflow-x:auto; font-size:1em;">
+LEYENDA PORTA 
+ALTA ALTA DNI [número DNI] / LINEA A PORTAR [número] 
+    </pre>
+  </div>
+    <div class="section" id="pasos">
+    <h2>Pasos y Procedimientos para la Venta</h2>
+    <ol>
+      <li>
+        <b>PRESENTACIÓN:</b> <br>
+        ¿Hola cómo estás? ¿Hablo con ......? Mi nombre es Romina, te hablo del área de recupero de clientes de Movistar.<br>
+        <i>(Presentate con nombre y motivo de la llamada.)</i>
+      </li>
+      <li>
+        <b>SONDEO:</b> <br>
+        ¿Me figura en sistema que ya estuviste con nosotros es correcto? Bien te consulto, ¿actualmente estás con Claro verdad? ¿Y tenés abono mensual o prepago? ¿Tenés sólo esta línea o alguna más?<br>
+        Pregunta por la compañía actual, beneficios, si le alcanzan los GB, si tiene más líneas a su nombre. Adapta la oferta según lo que diga el cliente.<br>
+        Consulta el SCORE del cliente en el sistema de tt3 y pasa por RAPIPAGO para ver cuánto está pagando en Claro antes de continuar con la gestión.<br>
+      </li>
+      <li>
+        <b>BAJADA DE LA OFERTA CON REBATE DE OBJECIONES:</b> <br>
+        Tengo para brindarte una promoción/plan exclusivo para tu línea, tenés 15 GB de base + 10 de regalo por 6 meses a $ ......... Pasando más de una línea te doy 4 GB extras para cada una, ¿qué te parece? ¿Está muy bueno o no? Bien, también te cuento que contamos con un club de beneficios, ¿lo has escuchado o usado antes? Etc ...<br>
+        <i>(Explica el plan recomendado y sus beneficios. Menciona promociones, gigas extra, WhatsApp gratis, llamadas libres, roaming, etc. Rebate objeciones con seguridad y argumentos claros.)</i>
+      </li>
+      <li>
+        <b>RECOLECCIÓN Y TOMA DE DATOS:</b> <br>
+        Solicita los datos requeridos para portabilidad o fibra.<br>
+        Para portabilidad: nombre, DNI, fecha de nacimiento, correo, domicilio, número alternativo, foto DNI, código de portabilidad, método de envío.<br>
+        Para fibra: además, 3 números alternativos y 16 dígitos de tarjeta bancaria.<br>
+        Bien, decime ¿en qué localidad te encontrás? para brindarte la sucursal más cercana. Perfecto, ¿un mail para poder enviarte la factura? Te pido un número alternativo por las dudas que no podamos comunicarnos con vos. Voy a necesitar que me pongas en altavoz y me envíes foto del frente y dorso de tu DNI por WhatsApp.<br>
+        <i>(Asegúrate de recopilar todos los datos y documentos necesarios para la gestión.)</i>
+      </li>
+      <li>
+        <b>CIERRE COMERCIAL Y DE LA VENTA EN SÍ:</b> <br>
+        Perfecto, ya estaría todo, por último, paso a hacerte el cierre comercial, esto sirve de garantía tanto para vos como para mí, es un repaso de tus datos y lo que has contratado. Muchísimas gracias, seguimos en contacto por WhatsApp, te pido que no te comuniques ni le pases datos a nadie más que a mí, para evitar que se duplique o demore la portabilidad. ¡Gracias y bienvenido a Movistar!<br>
+        <i>(El área de Validación se contacta para confirmar los datos. Explica el proceso de instalación o portabilidad y los tiempos estimados. Advierte sobre llamadas de otras compañías. Informa sobre seguimiento y canales de atención. Recuerda el cierre cordial.)</i>
+      </li>
+    </ol>
+  </div>
+  <script>
+
+// Sincronizar automáticamente los campos de la ficha de venta con la sección de cierre comercial
+function syncCierreComercial() {
+  var form = document.getElementById('formDatos');
+  var cierre = document.getElementById('cierreComercialContenido');
+  if (!form || !cierre) return;
+  var campos = ['linea', 'nombre', 'dni', 'compania', 'plan', 'gigas_regalo', 'valor_plan'];
+  campos.forEach(function(campo) {
+    var input = form.elements[campo];
+    var span = cierre.querySelector('span.rellenar[data-campo="' + campo + '"]');
+    if (!span || !input) return;
+    var valor = input.value;
+    if (campo === 'dni' && valor.length > 2) {
+      valor = valor.slice(-3);
+    }
+    span.textContent = '';
+    void span.offsetWidth;
+    span.textContent = valor;
+    span.style.borderBottom = '1.5px solid #fff';
+    if (campo === 'valor_plan') {
+      span.style.minWidth = '60px';
+    } else {
+      span.style.minWidth = '120px';
+    }
+    span.style.display = 'inline-block';
+  });
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('formDatos');
+  if (!form) return;
+  ['linea','nombre','dni','compania','plan','gigas_regalo','valor_plan'].forEach(function(campo) {
+    var input = form.elements[campo];
+    if (input) {
+      input.addEventListener('input', syncCierreComercial);
+    }
+  });
+  // Inicializar al cargar
+  syncCierreComercial();
+});
+
+
+    // Bloquear letras en campos solo numéricos (DNI, CP, DNI/CUIT, DNI Fibra)
+    function soloNumerosInput(e) {
+      // Permitir teclas de control (borrar, flechas, tab, etc.)
+      if (
+        ["Backspace","Delete","ArrowLeft","ArrowRight","Tab","Home","End"].includes(e.key)
+        || (e.ctrlKey && ["a","c","v","x"].includes(e.key.toLowerCase()))
+      ) return;
+      // Permitir solo números
+      if (!/^[0-9]$/.test(e.key)) {
+        e.preventDefault();
+      }
+    }
+    function soloNumerosPaste(e) {
+      let texto = (e.clipboardData || window.clipboardData).getData('text');
+      if (!/^\d+$/.test(texto)) {
+        e.preventDefault();
+      }
+    }
+    window.addEventListener('DOMContentLoaded', function() {
+      const camposNumericos = [
+        'dni','dni_cuit_porta','dni_fibra','linea'
+      ];
+      camposNumericos.forEach(function(nombre) {
+        let el = document.querySelector(`[name="${nombre}"]`);
+        if (el) {
+          el.addEventListener('keydown', soloNumerosInput);
+          el.addEventListener('paste', soloNumerosPaste);
+        }
+      });
+    });
+
+    // Guardar datos en localStorage y mostrar último registro
+    document.getElementById('formDatos').onsubmit = function(e) {
+      e.preventDefault();
+      const data = {};
+      Array.from(this.elements).forEach(el => {
+        if (el.name) data[el.name] = el.value;
+      });
+      let registros = JSON.parse(localStorage.getItem('registrosMovistar')||'[]');
+      registros.push(data);
+      localStorage.setItem('registrosMovistar', JSON.stringify(registros));
+      mostrarUltimo();
+      this.reset();
+    };
+
+    function mostrarUltimo() {
+      let registros = JSON.parse(localStorage.getItem('registrosMovistar')||'[]');
+      if(registros.length) {
+        let d = registros[registros.length-1];
+        let html = '<h4>Último registro guardado:</h4><ul>';
+        for(let k in d) html += `<li><b>${k}:</b> ${d[k]}</li>`;
+        html += '</ul>';
+        document.getElementById('datosGuardados').innerHTML = html;
+      } else {
+        document.getElementById('datosGuardados').innerHTML = '';
+      }
+    }
+    mostrarUltimo();
+
+    // Mostrar todos los registros en una tabla agrupada por secciones (adaptado a la nueva estructura y sin botón copiar por sección)
+    document.getElementById('verRegistros').onclick = function() {
+      let registros = JSON.parse(localStorage.getItem('registrosMovistar')||'[]');
+      if(!registros.length) {
+        document.getElementById('tablaRegistros').innerHTML = '<em>No hay registros guardados.</em>';
+        return;
+      }
+      const orden = [
+        {titulo: 'Ficha de Venta', campos: [
+          'nombre','dni','correo','fecha_nac','plan','direccion','referencias','entre_calles','localidad','provincia','maps','cp','tel_alt','lineas_portar','linea_madre','compania','abono','pin']},
+        {titulo: 'Formato Porta', campos: [
+          'dni_cuit_porta','nombre_cl_porta','linea_porta','motivo_porta']},
+        {titulo: 'Formato Fibra', campos: [
+          'dni_fibra','coordenadas_fibra','domicilio_fibra','casa_edif_fibra','problema_fibra','tarjeta_fibra','num_alt_fibra','calle_manzana_fibra']}
+      ];
+      let html = '<h4>Todos los registros</h4>';
+      registros.forEach((r, idx) => {
+        html += `<div style="margin-bottom:1.5em; border:1px solid #ccc; border-radius:8px; background:#fafcff; padding:1em;">`;
+        orden.forEach(seccion => {
+          html += `<b>${seccion.titulo}</b><ul style='margin-bottom:0.7em;'>`;
+          seccion.campos.forEach(k => {
+            html += `<li><b>${k.replace(/_/g,' ').toUpperCase()}:</b> ${r[k]||''}</li>`;
+          });
+          html += '</ul>';
+        });
+        html += '</div>';
+        if (idx < registros.length-1) html += '<hr style="margin:1em 0;">';
+      });
+      document.getElementById('tablaRegistros').innerHTML = html;
+    };
+
+    // Función para copiar los datos de una sección del formulario al portapapeles en formato WhatsApp
+    window.copiarSeccionFormulario = function(seccion) {
+      const campos = {
+        ficha: [
+          {label:'Nombre y Apellido', name:'nombre'},
+          {label:'DNI', name:'dni'},
+          {label:'Correo electrónico', name:'correo'},
+          {label:'Fecha de nacimiento', name:'fecha_nac'},
+          {label:'PLAN', name:'plan'},
+          {label:'Dirección', name:'direccion'},
+          {label:'Referencias', name:'referencias'},
+          {label:'Entre calles', name:'entre_calles'},
+          {label:'Localidad', name:'localidad'},
+          {label:'Provincia', name:'provincia'},
+          {label:'Coordenadas google maps', name:'maps'},
+          {label:'Código Postal', name:'cp'},
+          {label:'Teléfono Alternativo', name:'tel_alt'},
+          {label:'Línea/s a portar', name:'lineas_portar'},
+          {label:'Línea madre (la que recibe el pin)', name:'linea_madre'},
+          {label:'Compañía (claro/personal)', name:'compania'},
+          {label:'Abono/Prepago', name:'abono'},
+          {label:'Pin', name:'pin'}
+        ],
+        porta: [
+          {label:'DNI/CUIT', name:'dni_cuit_porta'},
+          {label:'NOMBRE DEL CL', name:'nombre_cl_porta'},
+          {label:'LINEA', name:'linea_porta'},
+          {label:'MOTIVO DE CONSULTA', name:'motivo_porta'}
+        ],
+        fibra: [
+          {label:'DNI', name:'dni_fibra'},
+          {label:'Coordenadas', name:'coordenadas_fibra'},
+          {label:'Domicilio', name:'domicilio_fibra'},
+          {label:'Casa o edificio', name:'casa_edif_fibra'},
+          {label:'Descripción del problema', name:'problema_fibra'},
+          {label:'Tarjeta', name:'tarjeta_fibra'},
+          {label:'Número alternativo', name:'num_alt_fibra'},
+          {label:'Calle que completa la manzana', name:'calle_manzana_fibra'}
+        ]
+      };
+      let form = document.getElementById('formDatos');
+      let texto = '';
+      campos[seccion].forEach(c => {
+        let v = form.elements[c.name]?.value || '';
+        texto += c.label+': '+v+'\n';
+      });
+      navigator.clipboard.writeText(texto).then(()=>{
+        alert('Datos copiados al portapapeles.');
+      });
+    }
+
+    // Exportar registros a TXT en formato formulario con secciones y orden visual (adaptado a la nueva estructura)
+    document.getElementById('exportarRegistros').onclick = function() {
+      let registros = JSON.parse(localStorage.getItem('registrosMovistar')||'[]');
+      if(!registros.length) {
+        alert('No hay registros para exportar.');
+        return;
+      }
+      // Nueva estructura de secciones y campos
+      const orden = [
+        {titulo: 'Datos básicos', campos: [
+          'nombre','dni','correo','fecha_nac','plan','direccion','referencias','entre_calles','localidad','provincia','maps','cp','tel_alt','lineas_portar','linea_madre','compania','abono','pin']},
+        {titulo: 'Formato Porta', campos: [
+          'dni_cuit_porta','nombre_cl_porta','linea_porta','motivo_porta']},
+        {titulo: 'Formato Fibra', campos: [
+          'dni_fibra','coordenadas_fibra','domicilio_fibra','casa_edif_fibra','problema_fibra','tarjeta_fibra','num_alt_fibra','calle_manzana_fibra']}
+      ];
+      let lines = [];
+      registros.forEach((r, idx) => {
+        orden.forEach(seccion => {
+          lines.push('['+seccion.titulo+']');
+          seccion.campos.forEach(k => {
+            lines.push(`${k.replace(/_/g,' ').toUpperCase()}: ${r[k]||''}`);
+          });
+          lines.push('');
+        });
+        if (idx < registros.length-1) lines.push('------------------------------');
+      });
+      let blob = new Blob([lines.join('\r\n')], {type: 'text/plain'});
+      let a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'registros_movistar.txt';
+      a.click();
+    };
+    // Borrar todos los registros
+    document.getElementById('borrarRegistros').onclick = function() {
+      if(confirm('¿Seguro que deseas borrar todos los registros? Esta acción no se puede deshacer.')) {
+        localStorage.removeItem('registrosMovistar');
+        document.getElementById('tablaRegistros').innerHTML = '';
+        document.getElementById('datosGuardados').innerHTML = '';
+        alert('Registros eliminados.');
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+  // Scroll suave y sin recarga para links internos
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var targetId = this.getAttribute('href').slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({behavior: 'smooth'});
+        // Opcional: actualizar el hash en la URL sin recargar
+        history.replaceState(null, '', '#' + targetId);
+      }
+    });
+  });
+});
+  // Función para borrar los campos de cada sección del formulario
+  window.borrarSeccionFormulario = function(seccion) {
+    const campos = {
+      ficha: [
+        'nombre','dni','correo','fecha_nac','plan','direccion','referencias','entre_calles','localidad','provincia','maps','cp','tel_alt','lineas_portar','linea_madre','compania','abono','pin','gigas_regalo','linea', 'valor_plan'
+      ],
+      porta: [
+        'dni_cuit_porta','nombre_cl_porta','linea_porta','motivo_porta'
+      ],
+      fibra: [
+        'dni_fibra','coordenadas_fibra','domicilio_fibra','casa_edif_fibra','problema_fibra','tarjeta_fibra','num_alt_fibra','calle_manzana_fibra'
+      ]
+    };
+    let form = document.getElementById('formDatos');
+    campos[seccion].forEach(function(nombre) {
+      if (form.elements[nombre]) form.elements[nombre].value = '';
+    });
+    // Sincronizar cierre comercial si corresponde
+    if(seccion==='ficha') syncCierreComercial();
+  }
+  </script>
+
+  <div class="section" id="info">
+    <h2>Información Clave de la Capacitación</h2>
+    <ul>
+      <li>El objetivo de ventas se mide por puntos: cada plan suma puntos distintos.</li>
+      <ul>
+        <li>Portabilidad 15GB, 30GB y 50GB: 2 puntos cada una (recomendado iniciar por 15GB).</li>
+        <li>Portabilidad 8GB: 1.5 puntos.</li>
+        <li>Portabilidad 4GB: 1 punto.</li>
+        <li>Fibra 300Mb: 2.5 puntos (comisión estimada $22.500 por venta).</li>
+      </ul>
+      <li>Para cubrir el sueldo básico, se deben sumar 30 puntos mensuales (ejemplo: 15 ventas de 15GB).</li>
+      <li>Hay niveles de comisión y bonos extra por superar objetivos.</li>
+      <li>Más ventas, más comisión: cada porta extra suma más dinero.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="planes">
+    <h2>Planes y Beneficios</h2>
+    <h3>Portabilidad (Planes Móviles)</h3>
+    <ul>
+      <li><b>Plan 15GB</b>: 15GB base + 10GB de regalo por 6 meses. Llamadas y WhatsApp ilimitados. Precio y descuento al día de hoy, consultar.</li>
+      <li><b>Plan 30GB</b>: 2 puntos. Beneficios similares, más gigas.</li>
+      <li><b>Plan 50GB</b>: 2 puntos. Beneficios similares, más gigas.</li>
+      <li><b>Plan 8GB</b>: 1.5 puntos.</li>
+      <li><b>Plan 4GB</b>: 1 punto.</li>
+    </ul>
+    <b>Beneficios adicionales:</b>
+    <ul>
+      <li>WhatsApp gratis, llamadas libres, roaming América a precio local, gigas extra con test drive.</li>
+      <li>Descuentos exclusivos por 12 meses.</li>
+    </ul>
+    <h3>Fibra Óptica</h3>
+    <ul>
+      <li><b>Fibra 300Mb</b>: 2.5 puntos. Internet 100% simétrico, máxima estabilidad y velocidad real.</li>
+      <li>Pago por débito automático obligatorio.</li>
+      <li>Instalación coordinada por WhatsApp, horarios de 8 a 12 o 13 a 17.</li>
+    </ul>
+    <b>Beneficios adicionales:</b>
+    <ul>
+      <li>Router WiFi incluido, soporte técnico, instalación bonificada en promos.</li>
+    </ul>
+    <h4>Información complementaria sobre Fibra Óptica</h4>
+    <ul>
+      <li>Servicio 100% por fibra óptica, velocidad contratada = velocidad recibida.</li>
+      <li>Pago solo por débito automático con tarjeta bancaria (no se acepta MercadoPago, Ualá, Maestro Nación, etc.).</li>
+      <li>Dirección validada por Google Maps, instalación coordinada por WhatsApp o llamada.</li>
+      <li>Cliente debe dar 3 números alternativos y foto del DNI frente.</li>
+      <li>Técnico se comunica antes de la visita para confirmar presencia.</li>
+      <li>Horarios de instalación: 8 a 12 hs o 13 a 17 hs.</li>
+      <li>Notificaciones y seguimiento por WhatsApp.</li>
+    </ul>
+    <hr>
+    <h3>Clientes CUIT</h3>
+    <b>¿Quiénes son?</b>
+    <ul>
+      <li>Personas físicas o jurídicas (empresas, comercios, autónomos) con CUIT activo, inscriptos en ARCA (ex AFIP).</li>
+      <li>Pueden ser monotributistas, responsables inscriptos, sociedades, etc.</li>
+    </ul>
+    <b>Requisitos y documentación para clientes CUIT:</b>
+    <ul>
+      <li>Constancia de CUIT activa.</li>
+      <li>Constancia de IIBB (Ingresos Brutos) si corresponde.</li>
+      <li>Foto del DNI del titular.</li>
+      <li>Domicilio completo (calle, número, entre calles, barrio, localidad, CP, referencia).</li>
+      <li>Correo electrónico y 3 números alternativos.</li>
+      <li>16 dígitos de tarjeta de crédito/débito bancaria o efectivo (para fibra).</li>
+      <li>Preferencia de instalación (mañana/tarde).</li>
+    </ul>
+    <b class="important">Importante:</b>
+    <ul>
+      <li>Si el cliente CUIT tiene deuda, no puede portar hasta abonarla en su totalidad.</li>
+      <li>Puede comprar líneas nuevas si realiza portabilidad de un abono.</li>
+      <li>El asesor debe validar la documentación antes de cargar la venta.</li>
+    </ul>
+    <b>Tipos de clientes CUIT:</b>
+    <ul>
+      <li>Sujeto no categorizado: CUIT activo pero sin actividad registrada en ARCA (paga 49% de impuestos).</li>
+      <li>Sujeto categorizado: CUIT activo y categoría asignada (paga 35% de impuestos).</li>
+    </ul>
+    <b>Proceso de venta para CUIT:</b>
+    <ul>
+      <li>Preguntar por el CUIT activo, cantidad de líneas y uso.</li>
+      <li>Ofrecer el plan adecuado según el sondeo.</li>
+      <li>Recolectar toda la documentación y cargar la venta.</li>
+    </ul>
+  </div>
+
+
+  <div class="section" id="consejos">
+    <h2>Consejos y Buenas Prácticas</h2>
+    <ul>
+      <li>Practica la escucha activa y muestra empatía: ponete en el lugar del cliente, comprendé sus necesidades y preocupaciones.</li>
+      <li>Adapta la oferta al perfil del cliente: por ejemplo, a un joven resalta gigas y apps, a un adulto mayor la facilidad y el soporte.</li>
+      <li>No prometas lo que no puedes cumplir ni modifiques precios: sé transparente y profesional.</li>
+      <li>Sé claro con los precios: siempre informa que son "al día de hoy" y pueden variar.</li>
+      <li>Evita preguntas cerradas como "¿Le interesa?" o "¿Cuánto paga?". Presenta la oferta de manera directa y positiva.</li>
+      <li>Utiliza frases de cierre efectivas: "¿Prefiere el plan de 15GB o el de 8GB?", "¿A qué domicilio le enviamos el chip?", "¿Le queda cómodo recibir el técnico por la mañana o por la tarde?".</li>
+      <li>Rebate objeciones con seguridad y argumentos claros. Ejemplos y estrategias:</li>
+      <ul>
+        <li>Objeción: "No tengo tiempo para hacer el trámite". Respuesta: "El trámite es muy sencillo, nosotros lo gestionamos y solo debe esperar el chip en su domicilio. No tiene que hacer nada más."</li>
+        <li>Objeción: "No quiero cambiar porque tuve mala experiencia". Respuesta: "Entiendo su preocupación, por eso en Movistar tiene asesoría personalizada y soporte postventa para cualquier inconveniente. Además, puede contactarme directamente ante cualquier duda."</li>
+        <li>Objeción: "No me interesa". Respuesta: "¿Puedo preguntarle qué es lo que no le convence? Así puedo ofrecerle una opción más adecuada a sus necesidades."</li>
+        <li>Objeción: "No tengo cobertura en mi zona". Respuesta: "Podemos verificar juntos la cobertura y, si no está disponible, le aviso apenas llegue la posibilidad."</li>
+        <li>Objeción: "Es muy caro". Respuesta: "Actualmente tenemos descuentos exclusivos por 12 meses y beneficios adicionales como gigas de regalo y WhatsApp gratis. ¿Le gustaría que le detalle la promoción vigente?"</li>
+        <li>Objeción: "No soy el titular". Respuesta: "¿El titular podría estar presente para autorizar la gestión? Si no, podemos coordinar para otro momento."</li>
+        <li>Objeción: "No quiero dar mis datos por teléfono". Respuesta: "Entiendo su preocupación, la gestión es segura y sus datos solo se usan para el trámite con Movistar. Si prefiere, puede acercarse a una sucursal o recibir toda la información por correo."</li>
+        <li>Objeción: "No uso tantos gigas". Respuesta: "Tenemos planes más económicos y adaptados a su consumo. ¿Le gustaría que le cuente sobre el plan de 4GB o 8GB?"</li>
+        <li>Objeción: "No quiero compromisos largos". Respuesta: "No hay compromiso de permanencia, puede cambiar de plan o dar de baja cuando lo desee."</li>
+        <li>Estrategia general: Escucha la objeción, valida la preocupación del cliente y responde con una solución concreta o una pregunta que permita seguir la conversación.</li>
+      </ul>
+      <li>Mantén una actitud positiva y cordial en todo momento, incluso ante rechazos.</li>
+      <li>Toma nota de las dudas frecuentes y consulta a tus supervisores para mejorar tu argumentario.</li>
+      <li>Recuerda siempre despedirte cordialmente y agradecer la atención del cliente.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="paginas">
+    <h2>Páginas Útiles</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Página</th>
+          <th>¿Cuándo usarla?</th>
+          <th>¿Cómo usarla?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se pueden copiar las filas de la tabla de la guía original -->
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.movistar.com.ar/hogar/fibra-optica','fibra_optica');return false;">Verificación de cobertura</a></td>
+          <td>Antes de ofrecer fibra óptica, para confirmar si hay cobertura en el domicilio del cliente.</td>
+          <td>Ingresa la dirección del cliente y verifica si el servicio está disponible.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.movistar.com.ar/contactanos','contactanos');return false;">Atención al cliente</a></td>
+          <td>Para brindar canales de contacto postventa o ante consultas específicas.</td>
+          <td>Comparte el enlace con el cliente para que acceda a soporte, reclamos o consultas.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://apps-alc.mitrol.cloud/auth/realms/mitrol/protocol/openid-connect/auth?client_id=webpad-3-vercel&redirect_uri=https%3A%2F%2Fapps-alc.mitrol.cloud%2Fwebpad%2F&state=ee3d02be-259a-457c-9bcf-576ae27477d7&response_mode=fragment&response_type=code&scope=openid&nonce=6894ee20-2e5e-43ec-8c05-57bdc76fc18b','mitrol');return false;">Acceso a plataforma Mitrol (WebPad)</a></td>
+          <td>Para gestionar ventas, consultar score, cargar datos y hacer seguimiento de clientes.</td>
+          <td>Ingresa con tu usuario y contraseña, utiliza las funciones de CRM y gestión de ventas.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.movistar.com.ar/ayuda/locales-movistar','locales_movistar');return false;">Locales Movistar</a></td>
+          <td>Cuando el cliente necesita atención presencial o retirar un chip.</td>
+          <td>Busca el local más cercano según la ubicación del cliente.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do','cuit_afip');return false;">Constancia de CUIT (AFIP)</a></td>
+          <td>Para validar la situación fiscal de un cliente CUIT.</td>
+          <td>Ingresa el CUIT del cliente y descarga la constancia para adjuntar a la gestión.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://informes.nosis.com/?source=SitioNosis&q=38207907&UrlReferer=','nosis');return false;">Consulta Nosis</a></td>
+          <td>Para verificar antecedentes crediticios o situación financiera del cliente.</td>
+          <td>Ingresa el DNI o CUIT del cliente para obtener el informe.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.movistar.com.ar/ayuda/pedir-nuevo-chip','nuevo_chip');return false;">Pedir nuevo chip Movistar</a></td>
+          <td>Cuando el cliente necesita un chip nuevo por portabilidad, extravío o daño.</td>
+          <td>Sigue los pasos para solicitar el chip y elige el método de entrega.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://sites.google.com/view/planes-mvs/link-de-planes','links_planes');return false;">Links de Planes Movistar</a></td>
+          <td>Para consultar información interna y actualizada sobre los planes disponibles.</td>
+          <td>Accede con tu usuario y revisa los detalles de cada plan.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.andreani.com/buscar-sucursal','andreani');return false;">Buscar sucursal Andreani</a></td>
+          <td>Cuando el cliente elige retirar el chip o documentación en una sucursal Andreani.</td>
+          <td>Busca la sucursal más conveniente según la localidad del cliente.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.movistar.com.ar/4g','cobertura4g');return false;">Cobertura 4G Movistar</a></td>
+          <td>Para verificar la cobertura de red móvil 4G en la zona del cliente.</td>
+          <td>Ingresa la dirección o localidad para ver la cobertura disponible.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://sites.google.com/view/planes-mvs/oferta-m%C3%B3vil/negocios/claro-marzo?authuser=0','claro_oferta');return false;">Oferta móvil negocios Claro (marzo)</a></td>
+          <td>Para comparar ofertas de la competencia y argumentar beneficios de Movistar.</td>
+          <td>Consulta los planes y promociones vigentes de Claro para empresas.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://www.google.com/maps','maps');return false;">Google Maps</a> | <a href="#" onclick="window.open('https://numeracion.enacom.gob.ar/','enacom');return false;">ENACOM</a> | <a href="#" onclick="window.open('https://customercorner.net/users/sign_in','customer');return false;">Customer</a></td>
+          <td>Para ubicar direcciones, validar zonas de cobertura, coordinar entregas o validar numeración y portabilidad.</td>
+          <td>Busca la dirección del cliente o la sucursal más cercana. Para ENACOM, ingresa el número telefónico o consulta la base de datos para verificar información regulatoria.</td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="window.open('https://pagar.rapipago.com.ar/rapipagoWeb/pagos/','rapipago');return false;">Pago Rapipago</a></td>
+          <td>Cuando el cliente necesita abonar una deuda o factura pendiente.</td>
+          <td>Indica al cliente cómo pagar online o presencialmente en Rapipago.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer style="text-align:center; color:#888; margin-top:2em;">
+  
+  </footer>
+
+  <!-- Botón flotante para volver al índice -->
+  <button id="btn-flotante" title="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'});" style="position: fixed; bottom: 32px; right: 32px; background: #0057b8; color: #fff; border: none; border-radius: 50%; width: 56px; height: 56px; box-shadow: 0 4px 16px #0003; font-size: 2em; cursor: pointer; z-index: 1000; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">
+    ↑
+  </button>
+</body>
+</html>
